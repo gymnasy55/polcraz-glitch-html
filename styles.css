@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper h1.glitch {
+    color: white;
+    font-family: sans-serif;
+    font-weight: 800;
+    position: relative;
+    font-size: 100px;
+    padding: 30px;
+}
+.wrapper h1.glitch::before, .wrapper h1.glitch::after {
+    padding: 30px;
+    color: white;
+    content: "Ilya Kubariev";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    overflow: hidden;
+    top: 0;
+}
+.wrapper h1.glitch::before {
+    left: 3px;
+    text-shadow: -2px 0 red;
+    animation-name: glitch-animation-1;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+.wrapper h1.glitch::after {
+    left: -3px;
+    text-shadow: -2px 0 blue;
+    animation-name: glitch-animation-2;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+
+@keyframes glitch-animation-1 {
+    0% {
+        clip: rect(15px, 750px, 35px, 30px);
+    }
+    10% {
+        clip: rect(126px, 750px, 15px, 30px);
+    }
+    20% {
+        clip: rect(74px, 750px, 112px, 30px);
+    }
+    30% {
+        clip: rect(108px, 750px, 50px, 30px);
+    }
+    40% {
+        clip: rect(132px, 750px, 117px, 30px);
+    }
+    50% {
+        clip: rect(11px, 750px, 98px, 30px);
+    }
+    60% {
+        clip: rect(109px, 750px, 99px, 30px);
+    }
+    70% {
+        clip: rect(94px, 750px, 112px, 30px);
+    }
+    80% {
+        clip: rect(121px, 750px, 86px, 30px);
+    }
+    90% {
+        clip: rect(123px, 750px, 110px, 30px);
+    }
+    100% {
+        clip: rect(86px, 750px, 77px, 30px);
+    }
+}
+@keyframes glitch-animation-2 {
+    0% {
+        clip: rect(78px, 750px, 129px, 30px);
+    }
+    10% {
+        clip: rect(150px, 750px, 68px, 30px);
+    }
+    20% {
+        clip: rect(111px, 750px, 126px, 30px);
+    }
+    30% {
+        clip: rect(119px, 750px, 30px, 30px);
+    }
+    40% {
+        clip: rect(96px, 750px, 77px, 30px);
+    }
+    50% {
+        clip: rect(35px, 750px, 24px, 30px);
+    }
+    60% {
+        clip: rect(76px, 750px, 51px, 30px);
+    }
+    70% {
+        clip: rect(130px, 750px, 100px, 30px);
+    }
+    80% {
+        clip: rect(134px, 750px, 68px, 30px);
+    }
+    90% {
+        clip: rect(49px, 750px, 150px, 30px);
+    }
+    100% {
+        clip: rect(70px, 750px, 131px, 30px);
+    }
+}
